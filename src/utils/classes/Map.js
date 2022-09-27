@@ -1,8 +1,8 @@
-const maps = require('../../maps');
+const maps = require('../../assets/maps');
 
 class Map {
     constructor(map) {
-        this.map = map;
+        this.map = maps[map];
     }
 
     getMap() {
@@ -58,6 +58,12 @@ class Map {
                         return 'F ';
                     case 9:
                         return '- ';
+                    case 10:
+                        return '||';
+                    case 11:
+                        return '==';
+                    case 12:
+                        return ' ';
                     default:
                         return '  ';
                 }
